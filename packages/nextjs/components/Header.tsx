@@ -72,9 +72,9 @@ export const Header = () => {
     <header className="sticky lg:static top-0 flex items-center justify-between w-full h-16 px-4 py-2 z-20 bg-background border-b">
       <div className="flex items-center gap-4 w-auto lg:w-1/2">
         <div className="lg:hidden" ref={burgerMenuRef}>
-          <DropdownMenu open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
+          <DropdownMenu open={isDrawerOpen}>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className={cn("px-2", isDrawerOpen && "bg-secondary")}>
+              <Button variant="ghost" size="sm" className={cn("px-2", isDrawerOpen && "bg-secondary")} onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
                 <Bars3Icon className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
